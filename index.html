@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>25 Jurnal Referensi - Kelompok 15</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f5f3ff;--bg2:#ede9fe;--card:#ffffff;--text:#1e1b4b;--muted:#6b7280;
+  --primary:#6d28d9;--primary2:#8b5cf6;--accent:#ec4899;--border:#e5e7eb;
+  --shadow:0 4px 6px -1px rgba(109,40,217,.1),0 2px 4px -2px rgba(109,40,217,.06);
+  --shadow-lg:0 20px 25px -5px rgba(109,40,217,.15),0 8px 10px -6px rgba(109,40,217,.1);
+  --radius:14px;--radius-sm:10px;
+}
+[data-theme="dark"]{
+  --bg:#0f0a1f;--bg2:#1a1033;--card:#1f1640;--text:#f3f4f6;--muted:#9ca3af;
+  --border:#2d1f5a;--shadow:0 4px 6px -1px rgba(0,0,0,.3);
+  --shadow-lg:0 20px 25px -5px rgba(0,0,0,.5);
+}
+body{
+  font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:linear-gradient(135deg,var(--bg) 0%,var(--bg2) 100%);
+  color:var(--text);min-height:100vh;padding:20px;
+  transition:background .3s,color .3s;line-height:1.5;
+}
+.container{max-width:1200px;margin:0 auto}
+
+/* HEADER */
+.hero{
+  background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);
+  border-radius:var(--radius);padding:40px 32px;color:#fff;
+  margin-bottom:24px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;top:-50%;right:-10%;width:400px;height:400px;
+  background:radial-gradient(circle,rgba(255,255,255,.15) 0%,transparent 70%);border-radius:50%;
+}
+.hero-content{position:relative;z-index:1}
+.hero h1{font-size:32px;font-weight:700;margin-bottom:10px;letter-spacing:-.5px}
+.hero p{font-size:15px;opacity:.95;max-width:680px;line-height:1.6}
+.hero .badge{
+  display:inline-block;background:rgba(255,255,255,.2);backdrop-filter:blur(10px);
+  padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:14px;
+  border:1px solid rgba(255,255,255,.3);
+}
+.theme-toggle{
+  position:absolute;top:20px;right:20px;background:rgba(255,255,255,.2);
+  border:1px solid rgba(255,255,255,.3);color:#fff;width:42px;height:42px;
+  border-radius:50%;cursor:pointer;font-size:18px;backdrop-filter:blur(10px);
+  transition:all .2s;z-index:2;
+}
+.theme-toggle:hover{background:rgba(255,255,255,.3);transform:rotate(15deg)}
+
+/* STATS */
+.stats{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:14px;margin-bottom:24px;
+}
+.stat{
+  background:var(--card);border-radius:var(--radius-sm);padding:18px 20px;
+  box-shadow:var(--shadow);border:1px solid var(--border);transition:transform .2s;
+}
+.stat:hover{transform:translateY(-3px)}
+.stat-num{font-size:28px;font-weight:700;color:var(--primary);line-height:1}
+.stat-label{font-size:12px;color:var(--muted);margin-top:4px;font-weight:500}
+
+/* SEARCH & FILTERS */
+.controls{
+  background:var(--card);border-radius:var(--radius);padding:20px;
+  box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:24px;
+}
+.search-wrap{position:relative;margin-bottom:16px}
+.search{
+  width:100%;padding:12px 16px 12px 44px;border:2px solid var(--border);
+  border-radius:var(--radius-sm);font-size:14px;background:var(--bg);
+  color:var(--text);transition:all .2s;font-family:inherit;
+}
+.search:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(109,40,217,.1)}
+.search-icon{
+  position:absolute;left:14px;top:50%;transform:translateY(-50%);
+  color:var(--muted);font-size:18px;pointer-events:none;
+}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filter-btn{
+  font-size:13px;padding:8px 16px;border-radius:20px;border:1.5px solid var(--border);
+  background:var(--card);color:var(--muted);cursor:pointer;transition:all .2s;
+  font-family:inherit;font-weight:500;
+}
+.filter-btn:hover{border-color:var(--primary2);color:var(--primary)}
+.filter-btn.active{
+  background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);
+  border-color:transparent;color:#fff;box-shadow:0 4px 12px rgba(109,40,217,.3);
+}
+
+/* GRID & CARDS */
+.results-info{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:14px;font-size:13px;color:var(--muted);
+}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
+.card{
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  padding:20px;position:relative;transition:all .25s;box-shadow:var(--shadow);
+  display:flex;flex-direction:column;animation:fadeUp .4s ease-out;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.card:hover{
+  transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--primary2);
+}
+.card-top{display:flex;align-items:flex-start;gap:12px;margin-bottom:10px}
+.num{
+  font-size:13px;font-weight:700;color:#fff;
+  background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);
+  border-radius:8px;padding:4px 10px;white-space:nowrap;min-width:36px;text-align:center;
+}
+.title{font-size:15px;font-weight:600;line-height:1.45;color:var(--text);flex:1}
+.meta{font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.tag{font-size:11px;padding:3px 10px;border-radius:12px;font-weight:500}
+.tag-wn{background:#d1fae5;color:#065f46}
+.tag-dig{background:#dbeafe;color:#1e40af}
+.tag-pkn{background:#fed7aa;color:#9a3412}
+.tag-nas{background:#fce7f3;color:#9d174d}
+.tag-lit{background:#d9f99d;color:#365314}
+[data-theme="dark"] .tag-wn{background:#064e3b;color:#6ee7b7}
+[data-theme="dark"] .tag-dig{background:#1e3a8a;color:#93c5fd}
+[data-theme="dark"] .tag-pkn{background:#7c2d12;color:#fdba74}
+[data-theme="dark"] .tag-nas{background:#831843;color:#f9a8d4}
+[data-theme="dark"] .tag-lit{background:#365314;color:#bef264}
+.link-row{display:flex;align-items:center;gap:8px;margin-top:auto}
+.link-btn{
+  font-size:13px;padding:8px 16px;border-radius:8px;border:none;
+  background:linear-gradient(135deg,var(--primary) 0%,var(--primary2) 100%);
+  color:#fff;cursor:pointer;text-decoration:none;display:inline-flex;
+  align-items:center;gap:6px;font-weight:600;transition:all .2s;flex:1;justify-content:center;
+}
+.link-btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(109,40,217,.35)}
+.sinta{
+  font-size:11px;color:var(--muted);font-weight:600;padding:4px 10px;
+  background:var(--bg);border-radius:8px;border:1px solid var(--border);
+}
+.empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.empty-icon{font-size:48px;margin-bottom:12px}
+
+/* RESPONSIVE */
+@media(max-width:640px){
+  body{padding:12px}
+  .hero{padding:28px 20px}
+  .hero h1{font-size:24px}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <button class="theme-toggle" onclick="toggleTheme()" title="Ganti tema">🌙</button>
+    <div class="hero-content">
+      <span class="badge">📚 KELOMPOK 15 - PKN</span>
+      <h1>25 Jurnal Referensi</h1>
+      <p>Penguatan Wawasan Nusantara di Era Globalisasi &amp; Media Digital. Klik tombol "Buka Jurnal" untuk membaca jurnal lengkapnya.</p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num" id="stat-total">25</div><div class="stat-label">Total Jurnal</div></div>
+    <div class="stat"><div class="stat-num" id="stat-wn">0</div><div class="stat-label">Wawasan Nusantara</div></div>
+    <div class="stat"><div class="stat-num" id="stat-dig">0</div><div class="stat-label">Media Digital</div></div>
+    <div class="stat"><div class="stat-num" id="stat-pkn">0</div><div class="stat-label">PKn &amp; Kebangsaan</div></div>
+  </div>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search" id="search" placeholder="Cari berdasarkan judul, penulis, atau jurnal...">
+    </div>
+    <div class="filters">
+      <button class="filter-btn active" data-tag="all">Semua (25)</button>
+      <button class="filter-btn" data-tag="wn">🌐 Wawasan Nusantara</button>
+      <button class="filter-btn" data-tag="dig">📱 Media Digital</button>
+      <button class="filter-btn" data-tag="pkn">📖 PKn &amp; Kebangsaan</button>
+      <button class="filter-btn" data-tag="nas">🏳️ Nasionalisme</button>
+      <button class="filter-btn" data-tag="lit">✅ Literasi Digital</button>
+    </div>
+  </div>
+
+  <div class="results-info">
+    <span id="result-count">Menampilkan 25 jurnal</span>
+  </div>
+
+  <div class="grid" id="grid"></div>
+</div>
+<!-- PLACEHOLDER -->
+<script>
+const journals=[
+{n:1,title:"Dinamika Wawasan Nusantara dalam Menghadapi Era Globalisasi",authors:"Pringadhi, A.P. & Najicha, F.U.",journal:"Jurnal Global Citizen",year:"2023",vol:"Vol.12 No.2",tags:["wn","pkn"],url:"https://ejurnal.unisri.ac.id/index.php/glbctz/article/view/9956",sinta:"SINTA 4"},
+{n:2,title:"Upaya Memperkuat Kebudayaan Bangsa Melalui Penerapan Wawasan Nusantara di Era Westernisasi",authors:"Malinda, V. & Najicha, F.U.",journal:"Jurnal Global Citizen",year:"2023",vol:"Vol.12 No.2",tags:["wn","pkn"],url:"https://ejurnal.unisri.ac.id/index.php/glbctz/article/view/9956",sinta:"SINTA 4"},
+{n:3,title:"Wawasan Nusantara sebagai Upaya Membangun Rasa dan Sikap Nasionalisme Warga Negara",authors:"Najicha, F.U. et al.",journal:"Jurnal Global Citizen",year:"2021",vol:"Vol.10",tags:["wn","nas"],url:"https://ejurnal.unisri.ac.id/index.php/glbctz/article/view/5755",sinta:"SINTA 4"},
+{n:4,title:"Pentingnya Pemahaman Wawasan Nusantara bagi Generasi Z untuk Membangun Rasa Nasionalisme",authors:"Saputri, S.A. & Najicha, F.U.",journal:"JPKN: Jurnal Pendidikan Kewarganegaraan",year:"2023",vol:"Vol.7 No.2",tags:["wn","nas"],url:"https://dx.doi.org/10.31571/jpkn.v7i2.7474",sinta:"SINTA 3"},
+{n:5,title:"Meningkatkan Kesadaran Mahasiswa tentang Wawasan Nusantara sebagai Geopolitik Bangsa Melalui Infografis",authors:"Tim Peneliti",journal:"Jurnal Intelek dan Cendikiawan Nusantara",year:"2024",vol:"Vol.1 No.6",tags:["wn","dig"],url:"https://jicnusantara.com/index.php/jicn/article/view/1719",sinta:"Nasional"},
+{n:6,title:"Identitas Nasional dan Nasionalisme di Era Digital: dalam Kajian Kewarganegaraan",authors:"Manalu, D.K. et al.",journal:"Jagaddhita: Jurnal Kebhinnekaan",year:"2024",vol:"Vol.4 No.1",tags:["nas","dig","pkn"],url:"https://journal.unindra.ac.id/index.php/jagaddhita/article/view/3650",sinta:"Nasional"},
+{n:7,title:"Media Sosial TikTok dan Fenomena #KaburAjaDulu: Perspektif Generasi Z Terhadap Nasionalisme",authors:"Tim Peneliti",journal:"Jurnal Media Informatika (JUMIN)",year:"2025",vol:"Vol.6",tags:["nas","dig"],url:"https://ejournal.sisfokomtek.org/index.php/jumin/article/view/7136",sinta:"Nasional"},
+{n:8,title:"Peran Media Sosial dalam Meningkatkan Kesadaran Identitas Nasional Generasi Milenial",authors:"Assidiq, Alfarhani, Nandika & Amirullah",journal:"MAJIM: Jurnal Pendidikan",year:"2023",vol:"Vol.3",tags:["nas","dig"],url:"https://jurnal.penerbitdaarulhuda.my.id/index.php/MAJIM/article/download/3132/3254",sinta:"Nasional"},
+{n:9,title:"Pengaruh Media Sosial terhadap Sikap Nasionalisme Mahasiswa dalam Konteks Pendidikan Kewarganegaraan",authors:"Syamzaimar",journal:"Al-Zayn: Jurnal Ilmu Sosial & Hukum",year:"2025",vol:"Vol.3 No.2",tags:["nas","dig","pkn"],url:"https://doi.org/10.61104/alz.v3i2.1255",sinta:"Nasional"},
+{n:10,title:"Implementasi Literasi Digital Berbasis Nilai Pancasila dalam Menangkal Hoaks",authors:"Tim Peneliti",journal:"Prosiding Seminar Nasional HUBISINTEK",year:"2026",vol:"Vol.6 No.1",tags:["lit","pkn"],url:"https://ojs.udb.ac.id/HUBISINTEK/article/view/5867",sinta:"Nasional"},
+{n:11,title:"Meningkatkan Literasi Digital dan Ketahanan terhadap Hoaks Melalui Pembelajaran PPKn",authors:"Tim Peneliti",journal:"Kajian Moral dan Kewarganegaraan",year:"2026",vol:"Terbaru",tags:["lit","pkn"],url:"https://ejournal.unesa.ac.id/index.php/jurnal-pendidikan-kewarganegaraa/article/view/74965",sinta:"SINTA 3"},
+{n:12,title:"Kewarganegaraan Digital sebagai Upaya Persiapan Menghadapi Tantangan Perkembangan Teknologi",authors:"Tim Peneliti",journal:"Indonesian Character Journal",year:"2023",vol:"Terkini",tags:["lit","dig","pkn"],url:"https://journal.binus.ac.id/index.php/icj/article/view/12262",sinta:"SINTA 4"},
+{n:13,title:"Tantangan dan Peluang Pendidikan Kewarganegaraan di Era Digital",authors:"Arya, M. & Maulia, S.T.",journal:"Causa: Jurnal Hukum dan Kewarganegaraan",year:"2024",vol:"Vol.3 No.11",tags:["pkn","dig"],url:"https://ojsid.my.id/index.php/JKEPMAS/article/view/119",sinta:"Nasional"},
+{n:14,title:"Pendidikan Kewarganegaraan di Era Digital: Membentuk Pemikiran Kritis, Literasi Digital, dan Partisipasi Aktif",authors:"Mistortoify, G. & Najicha, F.U.",journal:"ResearchGate / Jurnal Nasional",year:"2023",vol:"November 2023",tags:["pkn","lit","dig"],url:"https://www.researchgate.net/publication/376088756",sinta:"Nasional"},
+{n:15,title:"Implementasi Nilai-Nilai Bela Negara dalam Kehidupan Bermasyarakat",authors:"Tim Peneliti",journal:"Jurnal Kewarganegaraan",year:"2022",vol:"Vol.6 No.1",tags:["pkn","nas"],url:"https://journal.upy.ac.id/index.php/pkn/article/view/2674",sinta:"SINTA 5"},
+{n:16,title:"Integrasi Nasional sebagai Upaya Menghadapi Tantangan dalam Keberagaman",authors:"Putri et al.",journal:"Indigenous Knowledge",year:"2024",vol:"Vol.2",tags:["pkn","nas"],url:"https://jurnal.uns.ac.id/indigenous/article/view/81492",sinta:"SINTA 5"},
+{n:17,title:"Memperkuat Integrasi Nasional di Era Digital: Penguatan Resolusi Konflik",authors:"Hidayah, Y., Ulfah, N. & Trihastuti, M.",journal:"Anthropocene Journal",year:"2023",vol:"Vol.2 No.2",tags:["pkn","dig","nas"],url:"https://jurnal.uns.ac.id/indigenous/article/view/81492",sinta:"Nasional"},
+{n:18,title:"Penguatan Literasi Digital Melalui Mata Kuliah Pendidikan Pancasila untuk Mengantisipasi Hoax",authors:"Suryaningsih, A., Hidayah, Y. & Pratomo, W.",journal:"Jurnal Civics",year:"2024",vol:"Vol.21 No.1",tags:["lit","pkn"],url:"https://ojs.udb.ac.id/HUBISINTEK/article/view/5867",sinta:"SINTA 2"},
+{n:19,title:"Literasi Digital sebagai Penguatan Kompetensi Kewarganegaraan di Era Post-Truth",authors:"Rahmawati, Y., Supriatna, N. & Winataputra, U.S.",journal:"Jurnal Civics",year:"2022",vol:"Vol.19 No.1",tags:["lit","pkn"],url:"https://ejournal.unesa.ac.id/index.php/jurnal-pendidikan-kewarganegaraa/article/view/74965",sinta:"SINTA 2"},
+{n:20,title:"Identitas Nasional sebagai Karakter Bangsa Indonesia dalam Bermedia Sosial",authors:"Tim Peneliti UIN Malang",journal:"Maliki Interdisciplinary Journal",year:"2023",vol:"Vol.2",tags:["nas","dig"],url:"https://urj.uin-malang.ac.id/index.php/mij/article/download/17075/4664/",sinta:"Nasional"},
+{n:21,title:"Implikasi Kemajuan Teknologi terhadap Jiwa Nasionalisme dan Semangat Cinta Tanah Air Mahasiswa",authors:"Adelia et al.",journal:"Jurnal Pendidikan Sosial dan Humaniora",year:"2024",vol:"Vol.3 No.2",tags:["nas","dig"],url:"https://publisherqu.com/index.php/pediaqu/article/view/951",sinta:"Nasional"},
+{n:22,title:"Pentingnya Integrasi Nasional di Tingkat Perguruan Tinggi",authors:"Tim Peneliti",journal:"Jurnal Ilmiah Widya Pustaka Pendidikan",year:"2024",vol:"Vol.12 No.2",tags:["pkn","nas"],url:"https://jiwpp.unram.ac.id/index.php/widya/article/view/155",sinta:"Nasional"},
+{n:23,title:"Mewujudkan Sikap Bela Negara pada Generasi Muda dengan Menghindari 4 Dosa Pendidikan",authors:"Tim Peneliti",journal:"WISSEN: Jurnal Ilmu Sosial dan Humaniora",year:"2024",vol:"Terkini",tags:["nas","pkn"],url:"https://journal.appisi.or.id/index.php/wissen/article/view/202",sinta:"Nasional"},
+{n:24,title:"Urgensi Pancasila dalam Menanamkan Jiwa Nasionalisme pada Generasi Muda di Era Globalisasi",authors:"Ratri, E.P. & Najicha, F.U.",journal:"Jurnal Global Citizen",year:"2022",vol:"Vol.11 No.1",tags:["nas","pkn","wn"],url:"https://ejurnal.unisri.ac.id/index.php/glbctz/article/view/5755",sinta:"SINTA 4"},
+{n:25,title:"Pengembangan Wawasan Nusantara dan Implementasi Nilai Pancasila di Kalangan Gen Z",authors:"Tim Peneliti UIN Malang",journal:"Maliki Interdisciplinary Journal",year:"2025",vol:"Vol.3 No.6",tags:["wn","nas","pkn"],url:"https://urj.uin-malang.ac.id/index.php/mij/article/download/17249/4901/",sinta:"Nasional"}
+];
+
+const tagMap={wn:"Wawasan Nusantara",dig:"Media Digital",pkn:"PKn & Kebangsaan",nas:"Nasionalisme",lit:"Literasi Digital"};
+let activeTag='all';
+let searchQuery='';
+
+function renderStats(){
+  document.getElementById('stat-wn').textContent=journals.filter(j=>j.tags.includes('wn')).length;
+  document.getElementById('stat-dig').textContent=journals.filter(j=>j.tags.includes('dig')).length;
+  document.getElementById('stat-pkn').textContent=journals.filter(j=>j.tags.includes('pkn')).length;
+}
+
+function render(){
+  let list=journals;
+  if(activeTag!=='all') list=list.filter(j=>j.tags.includes(activeTag));
+  if(searchQuery){
+    const q=searchQuery.toLowerCase();
+    list=list.filter(j=>
+      j.title.toLowerCase().includes(q)||
+      j.authors.toLowerCase().includes(q)||
+      j.journal.toLowerCase().includes(q)
+    );
+  }
+  const g=document.getElementById('grid');
+  document.getElementById('result-count').textContent='Menampilkan '+list.length+' jurnal';
+  if(list.length===0){
+    g.innerHTML='<div class="empty" style="grid-column:1/-1"><div class="empty-icon">🔍</div><div>Tidak ada jurnal yang cocok dengan pencarian Anda.</div></div>';
+    return;
+  }
+  g.innerHTML=list.map(j=>{
+    const tagHtml=j.tags.map(t=>'<span class="tag tag-'+t+'">'+tagMap[t]+'</span>').join('');
+    return '<div class="card"><div class="card-top"><span class="num">'+j.n+'</span><span class="title">'+j.title+'</span></div>'+
+      '<div class="meta">👤 '+j.authors+'<br>📖 '+j.journal+'<br>📅 '+j.year+' &middot; '+j.vol+'</div>'+
+      '<div class="tags">'+tagHtml+'</div>'+
+      '<div class="link-row"><a href="'+j.url+'" target="_blank" class="link-btn">🔗 Buka Jurnal</a><span class="sinta">'+j.sinta+'</span></div></div>';
+  }).join('');
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeTag=btn.dataset.tag;
+    render();
+  });
+});
+
+document.getElementById('search').addEventListener('input',e=>{
+  searchQuery=e.target.value;
+  render();
+});
+
+function toggleTheme(){
+  const html=document.documentElement;
+  const cur=html.getAttribute('data-theme');
+  const next=cur==='dark'?'light':'dark';
+  html.setAttribute('data-theme',next);
+  document.querySelector('.theme-toggle').textContent=next==='dark'?'☀️':'🌙';
+  try{localStorage.setItem('theme',next)}catch(e){}
+}
+
+(function init(){
+  try{
+    const saved=localStorage.getItem('theme');
+    if(saved){
+      document.documentElement.setAttribute('data-theme',saved);
+      document.querySelector('.theme-toggle').textContent=saved==='dark'?'☀️':'🌙';
+    }
+  }catch(e){}
+  renderStats();
+  render();
+})();
+</script>
+</body>
+</html>
