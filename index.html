@@ -2,295 +2,264 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>25 Jurnal Referensi - Kelompok 15</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Transformasi Wawasan Nusantara — Digital Nationalism Gen Z</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#f5f3ff;--bg2:#ede9fe;--card:#ffffff;--text:#1e1b4b;--muted:#6b7280;
-  --primary:#6d28d9;--primary2:#8b5cf6;--accent:#ec4899;--border:#e5e7eb;
-  --shadow:0 4px 6px -1px rgba(109,40,217,.1),0 2px 4px -2px rgba(109,40,217,.06);
-  --shadow-lg:0 20px 25px -5px rgba(109,40,217,.15),0 8px 10px -6px rgba(109,40,217,.1);
-  --radius:14px;--radius-sm:10px;
+  --bg:#0b0d17;--bg2:#11142a;--surface:rgba(255,255,255,.04);--surface2:rgba(255,255,255,.07);
+  --border:rgba(255,255,255,.08);--border2:rgba(255,255,255,.16);
+  --text:#e9ecf5;--muted:#9aa0b8;--accent:#7c5cff;--accent2:#22d3ee;--accent3:#f472b6;
+  --shadow:0 10px 40px rgba(0,0,0,.45);
+  --radius:16px;--radius-sm:10px;
+  --font:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
 }
-[data-theme="dark"]{
-  --bg:#0f0a1f;--bg2:#1a1033;--card:#1f1640;--text:#f3f4f6;--muted:#9ca3af;
-  --border:#2d1f5a;--shadow:0 4px 6px -1px rgba(0,0,0,.3);
-  --shadow-lg:0 20px 25px -5px rgba(0,0,0,.5);
+[data-theme="light"]{
+  --bg:#f5f6fb;--bg2:#eaecf6;--surface:#ffffff;--surface2:#f8f9fd;
+  --border:rgba(20,23,40,.08);--border2:rgba(20,23,40,.18);
+  --text:#1a1d2e;--muted:#5a6079;--shadow:0 10px 30px rgba(20,23,40,.08);
 }
-body{
-  font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;
-  background:linear-gradient(135deg,var(--bg) 0%,var(--bg2) 100%);
-  color:var(--text);min-height:100vh;padding:20px;
-  transition:background .3s,color .3s;line-height:1.5;
-}
-.container{max-width:1200px;margin:0 auto}
-
-/* HEADER */
-.hero{
-  background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);
-  border-radius:var(--radius);padding:40px 32px;color:#fff;
-  margin-bottom:24px;box-shadow:var(--shadow-lg);position:relative;overflow:hidden;
-}
-.hero::before{
-  content:"";position:absolute;top:-50%;right:-10%;width:400px;height:400px;
-  background:radial-gradient(circle,rgba(255,255,255,.15) 0%,transparent 70%);border-radius:50%;
-}
-.hero-content{position:relative;z-index:1}
-.hero h1{font-size:32px;font-weight:700;margin-bottom:10px;letter-spacing:-.5px}
-.hero p{font-size:15px;opacity:.95;max-width:680px;line-height:1.6}
-.hero .badge{
-  display:inline-block;background:rgba(255,255,255,.2);backdrop-filter:blur(10px);
-  padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:14px;
-  border:1px solid rgba(255,255,255,.3);
-}
-.theme-toggle{
-  position:absolute;top:20px;right:20px;background:rgba(255,255,255,.2);
-  border:1px solid rgba(255,255,255,.3);color:#fff;width:42px;height:42px;
-  border-radius:50%;cursor:pointer;font-size:18px;backdrop-filter:blur(10px);
-  transition:all .2s;z-index:2;
-}
-.theme-toggle:hover{background:rgba(255,255,255,.3);transform:rotate(15deg)}
-
-/* STATS */
-.stats{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:14px;margin-bottom:24px;
-}
-.stat{
-  background:var(--card);border-radius:var(--radius-sm);padding:18px 20px;
-  box-shadow:var(--shadow);border:1px solid var(--border);transition:transform .2s;
-}
-.stat:hover{transform:translateY(-3px)}
-.stat-num{font-size:28px;font-weight:700;color:var(--primary);line-height:1}
-.stat-label{font-size:12px;color:var(--muted);margin-top:4px;font-weight:500}
-
-/* SEARCH & FILTERS */
-.controls{
-  background:var(--card);border-radius:var(--radius);padding:20px;
-  box-shadow:var(--shadow);border:1px solid var(--border);margin-bottom:24px;
-}
-.search-wrap{position:relative;margin-bottom:16px}
-.search{
-  width:100%;padding:12px 16px 12px 44px;border:2px solid var(--border);
-  border-radius:var(--radius-sm);font-size:14px;background:var(--bg);
-  color:var(--text);transition:all .2s;font-family:inherit;
-}
-.search:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(109,40,217,.1)}
-.search-icon{
-  position:absolute;left:14px;top:50%;transform:translateY(-50%);
-  color:var(--muted);font-size:18px;pointer-events:none;
-}
-.filters{display:flex;gap:8px;flex-wrap:wrap}
-.filter-btn{
-  font-size:13px;padding:8px 16px;border-radius:20px;border:1.5px solid var(--border);
-  background:var(--card);color:var(--muted);cursor:pointer;transition:all .2s;
-  font-family:inherit;font-weight:500;
-}
-.filter-btn:hover{border-color:var(--primary2);color:var(--primary)}
-.filter-btn.active{
-  background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);
-  border-color:transparent;color:#fff;box-shadow:0 4px 12px rgba(109,40,217,.3);
-}
-
-/* GRID & CARDS */
-.results-info{
-  display:flex;justify-content:space-between;align-items:center;
-  margin-bottom:14px;font-size:13px;color:var(--muted);
-}
-.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
-.card{
-  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
-  padding:20px;position:relative;transition:all .25s;box-shadow:var(--shadow);
-  display:flex;flex-direction:column;animation:fadeUp .4s ease-out;
-}
-@keyframes fadeUp{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
-.card:hover{
-  transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--primary2);
-}
-.card-top{display:flex;align-items:flex-start;gap:12px;margin-bottom:10px}
-.num{
-  font-size:13px;font-weight:700;color:#fff;
-  background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);
-  border-radius:8px;padding:4px 10px;white-space:nowrap;min-width:36px;text-align:center;
-}
-.title{font-size:15px;font-weight:600;line-height:1.45;color:var(--text);flex:1}
-.meta{font-size:12px;color:var(--muted);margin-bottom:12px;line-height:1.6}
-.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
-.tag{font-size:11px;padding:3px 10px;border-radius:12px;font-weight:500}
-.tag-wn{background:#d1fae5;color:#065f46}
-.tag-dig{background:#dbeafe;color:#1e40af}
-.tag-pkn{background:#fed7aa;color:#9a3412}
-.tag-nas{background:#fce7f3;color:#9d174d}
-.tag-lit{background:#d9f99d;color:#365314}
-[data-theme="dark"] .tag-wn{background:#064e3b;color:#6ee7b7}
-[data-theme="dark"] .tag-dig{background:#1e3a8a;color:#93c5fd}
-[data-theme="dark"] .tag-pkn{background:#7c2d12;color:#fdba74}
-[data-theme="dark"] .tag-nas{background:#831843;color:#f9a8d4}
-[data-theme="dark"] .tag-lit{background:#365314;color:#bef264}
-.link-row{display:flex;align-items:center;gap:8px;margin-top:auto}
-.link-btn{
-  font-size:13px;padding:8px 16px;border-radius:8px;border:none;
-  background:linear-gradient(135deg,var(--primary) 0%,var(--primary2) 100%);
-  color:#fff;cursor:pointer;text-decoration:none;display:inline-flex;
-  align-items:center;gap:6px;font-weight:600;transition:all .2s;flex:1;justify-content:center;
-}
-.link-btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(109,40,217,.35)}
-.sinta{
-  font-size:11px;color:var(--muted);font-weight:600;padding:4px 10px;
-  background:var(--bg);border-radius:8px;border:1px solid var(--border);
-}
-.empty{text-align:center;padding:60px 20px;color:var(--muted)}
-.empty-icon{font-size:48px;margin-bottom:12px}
-
-/* RESPONSIVE */
-@media(max-width:640px){
-  body{padding:12px}
-  .hero{padding:28px 20px}
-  .hero h1{font-size:24px}
-  .grid{grid-template-columns:1fr}
+html,body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;-webkit-font-smoothing:antialiased}
+body{background:radial-gradient(1200px 600px at 10% -10%,rgba(124,92,255,.18),transparent 60%),radial-gradient(900px 500px at 100% 0%,rgba(34,211,238,.12),transparent 60%),var(--bg);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px;letter-spacing:.2px}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 12px var(--accent)}
+.iconbtn{width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;border-radius:10px;background:var(--surface);border:1px solid var(--border);color:var(--text);cursor:pointer;transition:.2s}
+.iconbtn:hover{background:var(--surface2);border-color:var(--border2);transform:translateY(-1px)}
+.hero{position:relative;padding:36px 28px;border-radius:24px;background:linear-gradient(135deg,rgba(124,92,255,.18),rgba(34,211,238,.10) 50%,rgba(244,114,182,.12));border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-40%;background:conic-gradient(from 90deg at 50% 50%,transparent,rgba(124,92,255,.18),transparent 30%);animation:spin 18s linear infinite;opacity:.55;z-index:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero>*{position:relative;z-index:1}
+.avatar{width:74px;height:74px;border-radius:22px;background:linear-gradient(135deg,#7c5cff,#22d3ee);display:flex;align-items:center;justify-content:center;font-size:30px;color:white;box-shadow:0 14px 40px rgba(124,92,255,.45);margin-bottom:14px}
+.hero h1{font-size:clamp(22px,4vw,32px);font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-bottom:10px}
+.hero h1 .grad{background:linear-gradient(90deg,#a78bfa,#22d3ee 60%,#f472b6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.badge{font-size:11.5px;padding:5px 11px;border-radius:999px;background:var(--surface2);border:1px solid var(--border);color:var(--text);display:inline-flex;align-items:center;gap:6px}
+.badge.q1{background:linear-gradient(135deg,rgba(124,92,255,.25),rgba(34,211,238,.18));border-color:transparent;color:#fff}
+.section{margin-top:22px}
+.section h2{font-size:13px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.section h2::before{content:"";width:4px;height:14px;border-radius:3px;background:linear-gradient(var(--accent),var(--accent2))}
+.nov{padding:16px 18px;border-radius:16px;background:var(--surface);border:1px solid var(--border);transition:.2s}
+.nov:hover{transform:translateY(-2px);border-color:var(--border2);background:var(--surface2)}
+.nov .ico{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;background:linear-gradient(135deg,rgba(124,92,255,.25),rgba(34,211,238,.2));margin-bottom:10px}
+.nov h3{font-size:13.5px;font-weight:600;margin-bottom:6px}
+.nov p{font-size:12.5px;color:var(--muted);line-height:1.55}
+.controls{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+.search{position:relative}
+.search input{width:100%;padding:12px 14px 12px 40px;border-radius:12px;background:var(--surface);border:1px solid var(--border);color:var(--text);font-size:13.5px;font-family:inherit;outline:none;transition:.2s}
+.search input::placeholder{color:var(--muted)}
+.search input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(124,92,255,.15)}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.fbtn{font-size:12px;padding:6px 12px;border-radius:999px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;transition:.15s;font-family:inherit}
+.fbtn:hover{color:var(--text);border-color:var(--border2)}
+.fbtn.active{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;color:#fff;font-weight:500}
+.stats{font-size:12px;color:var(--muted);margin:8px 2px 4px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px 18px;position:relative;transition:.2s;animation:fadein .4s ease both;display:flex;flex-direction:column}
+.actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:auto}
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.card:hover{border-color:var(--border2);background:var(--surface2);transform:translateY(-2px);box-shadow:var(--shadow)}
+.card-top{display:flex;align-items:flex-start;gap:12px;margin-bottom:8px}
+.num{flex-shrink:0;width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,rgba(124,92,255,.2),rgba(34,211,238,.18));color:var(--text);display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:600}
+.title{font-size:14px;font-weight:600;line-height:1.45;letter-spacing:-.005em}
+.meta{font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.55}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tag{font-size:10.5px;padding:3px 9px;border-radius:999px;font-weight:500;letter-spacing:.02em}
+.tag-wn{background:rgba(34,211,238,.14);color:#67e8f9;border:1px solid rgba(34,211,238,.25)}
+.tag-dig{background:rgba(124,92,255,.16);color:#c4b5fd;border:1px solid rgba(124,92,255,.3)}
+.tag-ai{background:rgba(244,114,182,.14);color:#fda4af;border:1px solid rgba(244,114,182,.3)}
+.tag-genz{background:rgba(250,204,21,.12);color:#fde68a;border:1px solid rgba(250,204,21,.25)}
+.tag-nas{background:rgba(74,222,128,.13);color:#86efac;border:1px solid rgba(74,222,128,.25)}
+.tag-lit{background:rgba(251,146,60,.13);color:#fdba74;border:1px solid rgba(251,146,60,.25)}
+[data-theme="light"] .tag-wn{color:#0e7490}
+[data-theme="light"] .tag-dig{color:#5b21b6}
+[data-theme="light"] .tag-ai{color:#9d174d}
+[data-theme="light"] .tag-genz{color:#854d0e}
+[data-theme="light"] .tag-nas{color:#166534}
+[data-theme="light"] .tag-lit{color:#9a3412}
+.actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.btn{font-size:12.5px;padding:7px 14px;border-radius:10px;border:1px solid var(--border2);background:var(--surface2);color:var(--text);cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-family:inherit;transition:.15s;font-weight:500}
+.btn:hover{transform:translateY(-1px);border-color:var(--accent);background:var(--surface)}
+.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border-color:transparent;color:#fff}
+.btn.primary:hover{filter:brightness(1.1);box-shadow:0 8px 24px rgba(124,92,255,.35)}
+.btn.dl{background:rgba(74,222,128,.14);border-color:rgba(74,222,128,.3);color:#86efac}
+[data-theme="light"] .btn.dl{color:#166534}
+.btn.dl:hover{background:rgba(74,222,128,.22);border-color:rgba(74,222,128,.5)}
+/* SINTA button */
+.btn.sinta-btn{background:rgba(251,146,60,.14);border-color:rgba(251,146,60,.32);color:#fdba74}
+[data-theme="light"] .btn.sinta-btn{color:#9a3412}
+.btn.sinta-btn:hover{background:rgba(251,146,60,.24);border-color:rgba(251,146,60,.52);transform:translateY(-1px)}
+.btn svg{width:14px;height:14px}
+.sinta{font-size:11px;font-weight:600;letter-spacing:.04em;margin-left:auto;padding:3px 9px;border-radius:6px;background:var(--surface2);border:1px solid var(--border);color:var(--text)}
+.sinta.s1{background:rgba(124,92,255,.2);color:#c4b5fd;border-color:rgba(124,92,255,.35)}
+.sinta.s2{background:rgba(34,211,238,.18);color:#67e8f9;border-color:rgba(34,211,238,.32)}
+.sinta.s3{background:rgba(74,222,128,.16);color:#86efac;border-color:rgba(74,222,128,.3)}
+.sinta.s4{background:rgba(250,204,21,.18);color:#fde68a;border-color:rgba(250,204,21,.32)}
+.sinta.s5{background:rgba(251,146,60,.18);color:#fdba74;border-color:rgba(251,146,60,.32)}
+[data-theme="light"] .sinta.s1{color:#5b21b6}
+[data-theme="light"] .sinta.s2{color:#0e7490}
+[data-theme="light"] .sinta.s3{color:#166534}
+[data-theme="light"] .sinta.s4{color:#854d0e}
+[data-theme="light"] .sinta.s5{color:#9a3412}
+.foot{margin-top:32px;padding-top:18px;border-top:1px solid var(--border);text-align:center;font-size:12px;color:var(--muted)}
+.foot strong{color:var(--text)}
+.empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:13px}
+.hidden{display:none!important}
+@media(max-width:600px){
+  .wrap{padding:18px 14px 60px}
+  .hero{padding:26px 20px}
+  .card{padding:14px 16px}
 }
 </style>
 </head>
 <body>
-<div class="container">
-  <div class="hero">
-    <button class="theme-toggle" onclick="toggleTheme()" title="Ganti tema">🌙</button>
-    <div class="hero-content">
-      <span class="badge">📚 KELOMPOK 15 - PKN</span>
-      <h1>25 Jurnal Referensi</h1>
-      <p>Penguatan Wawasan Nusantara di Era Globalisasi &amp; Media Digital. Klik tombol "Buka Jurnal" untuk membaca jurnal lengkapnya.</p>
-    </div>
-  </div>
-
-  <div class="stats">
-    <div class="stat"><div class="stat-num" id="stat-total">25</div><div class="stat-label">Total Jurnal</div></div>
-    <div class="stat"><div class="stat-num" id="stat-wn">0</div><div class="stat-label">Wawasan Nusantara</div></div>
-    <div class="stat"><div class="stat-num" id="stat-dig">0</div><div class="stat-label">Media Digital</div></div>
-    <div class="stat"><div class="stat-num" id="stat-pkn">0</div><div class="stat-label">PKn &amp; Kebangsaan</div></div>
-  </div>
-
-  <div class="controls">
-    <div class="search-wrap">
-      <span class="search-icon">🔍</span>
-      <input type="text" class="search" id="search" placeholder="Cari berdasarkan judul, penulis, atau jurnal...">
-    </div>
-    <div class="filters">
-      <button class="filter-btn active" data-tag="all">Semua (25)</button>
-      <button class="filter-btn" data-tag="wn">🌐 Wawasan Nusantara</button>
-      <button class="filter-btn" data-tag="dig">📱 Media Digital</button>
-      <button class="filter-btn" data-tag="pkn">📖 PKn &amp; Kebangsaan</button>
-      <button class="filter-btn" data-tag="nas">🏳️ Nasionalisme</button>
-      <button class="filter-btn" data-tag="lit">✅ Literasi Digital</button>
-    </div>
-  </div>
-
-  <div class="results-info">
-    <span id="result-count">Menampilkan 25 jurnal</span>
-  </div>
-
-  <div class="grid" id="grid"></div>
+<div class="wrap">
+<div class="topbar">
+  <div class="brand"><span class="dot"></span>Riset · Kelompok 15</div>
+  <button class="iconbtn" id="themeBtn" title="Toggle tema" aria-label="Toggle tema">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+  </button>
 </div>
-<!-- PLACEHOLDER -->
+
+<section class="hero">
+  <h1>Transformasi Wawasan Nusantara menuju <span class="grad">Digital Nationalism</span></h1>
+  <div class="badges">
+    <span class="badge q1">⚡ Target Scopus Q1</span>
+  </div>
+</section>
+<section class="section">
+  <h2>Cari & Filter</h2>
+  <div class="controls">
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" id="searchInput" placeholder="Cari judul, penulis, atau jurnal...">
+    </div>
+    <div class="filters" id="filterBar">
+      <button class="fbtn active" data-tag="all">Semua (25)</button>
+    </div>
+    <div class="stats" id="stats">Menampilkan 25 dari 25 jurnal</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Jurnal Referensi</h2>
+  <div class="grid" id="grid"></div>
+  <div class="empty hidden" id="empty">Tidak ada jurnal yang cocok. Coba kata kunci lain.</div>
+</section>
+
+<footer class="foot">
+</footer>
 <script>
-const journals=[
-{n:1,title:"Dinamika Wawasan Nusantara dalam Menghadapi Era Globalisasi",authors:"Pringadhi, A.P. & Najicha, F.U.",journal:"Jurnal Global Citizen",year:"2023",vol:"Vol.12 No.2",tags:["wn","pkn"],url:"https://ejurnal.unisri.ac.id/index.php/glbctz/article/view/9956",sinta:"SINTA 4"},
-{n:2,title:"Upaya Memperkuat Kebudayaan Bangsa Melalui Penerapan Wawasan Nusantara di Era Westernisasi",authors:"Malinda, V. & Najicha, F.U.",journal:"Jurnal Global Citizen",year:"2023",vol:"Vol.12 No.2",tags:["wn","pkn"],url:"https://ejurnal.unisri.ac.id/index.php/glbctz/article/view/9956",sinta:"SINTA 4"},
-{n:3,title:"Wawasan Nusantara sebagai Upaya Membangun Rasa dan Sikap Nasionalisme Warga Negara",authors:"Najicha, F.U. et al.",journal:"Jurnal Global Citizen",year:"2021",vol:"Vol.10",tags:["wn","nas"],url:"https://ejurnal.unisri.ac.id/index.php/glbctz/article/view/5755",sinta:"SINTA 4"},
-{n:4,title:"Pentingnya Pemahaman Wawasan Nusantara bagi Generasi Z untuk Membangun Rasa Nasionalisme",authors:"Saputri, S.A. & Najicha, F.U.",journal:"JPKN: Jurnal Pendidikan Kewarganegaraan",year:"2023",vol:"Vol.7 No.2",tags:["wn","nas"],url:"https://dx.doi.org/10.31571/jpkn.v7i2.7474",sinta:"SINTA 3"},
-{n:5,title:"Meningkatkan Kesadaran Mahasiswa tentang Wawasan Nusantara sebagai Geopolitik Bangsa Melalui Infografis",authors:"Tim Peneliti",journal:"Jurnal Intelek dan Cendikiawan Nusantara",year:"2024",vol:"Vol.1 No.6",tags:["wn","dig"],url:"https://jicnusantara.com/index.php/jicn/article/view/1719",sinta:"Nasional"},
-{n:6,title:"Identitas Nasional dan Nasionalisme di Era Digital: dalam Kajian Kewarganegaraan",authors:"Manalu, D.K. et al.",journal:"Jagaddhita: Jurnal Kebhinnekaan",year:"2024",vol:"Vol.4 No.1",tags:["nas","dig","pkn"],url:"https://journal.unindra.ac.id/index.php/jagaddhita/article/view/3650",sinta:"Nasional"},
-{n:7,title:"Media Sosial TikTok dan Fenomena #KaburAjaDulu: Perspektif Generasi Z Terhadap Nasionalisme",authors:"Tim Peneliti",journal:"Jurnal Media Informatika (JUMIN)",year:"2025",vol:"Vol.6",tags:["nas","dig"],url:"https://ejournal.sisfokomtek.org/index.php/jumin/article/view/7136",sinta:"Nasional"},
-{n:8,title:"Peran Media Sosial dalam Meningkatkan Kesadaran Identitas Nasional Generasi Milenial",authors:"Assidiq, Alfarhani, Nandika & Amirullah",journal:"MAJIM: Jurnal Pendidikan",year:"2023",vol:"Vol.3",tags:["nas","dig"],url:"https://jurnal.penerbitdaarulhuda.my.id/index.php/MAJIM/article/download/3132/3254",sinta:"Nasional"},
-{n:9,title:"Pengaruh Media Sosial terhadap Sikap Nasionalisme Mahasiswa dalam Konteks Pendidikan Kewarganegaraan",authors:"Syamzaimar",journal:"Al-Zayn: Jurnal Ilmu Sosial & Hukum",year:"2025",vol:"Vol.3 No.2",tags:["nas","dig","pkn"],url:"https://doi.org/10.61104/alz.v3i2.1255",sinta:"Nasional"},
-{n:10,title:"Implementasi Literasi Digital Berbasis Nilai Pancasila dalam Menangkal Hoaks",authors:"Tim Peneliti",journal:"Prosiding Seminar Nasional HUBISINTEK",year:"2026",vol:"Vol.6 No.1",tags:["lit","pkn"],url:"https://ojs.udb.ac.id/HUBISINTEK/article/view/5867",sinta:"Nasional"},
-{n:11,title:"Meningkatkan Literasi Digital dan Ketahanan terhadap Hoaks Melalui Pembelajaran PPKn",authors:"Tim Peneliti",journal:"Kajian Moral dan Kewarganegaraan",year:"2026",vol:"Terbaru",tags:["lit","pkn"],url:"https://ejournal.unesa.ac.id/index.php/jurnal-pendidikan-kewarganegaraa/article/view/74965",sinta:"SINTA 3"},
-{n:12,title:"Kewarganegaraan Digital sebagai Upaya Persiapan Menghadapi Tantangan Perkembangan Teknologi",authors:"Tim Peneliti",journal:"Indonesian Character Journal",year:"2023",vol:"Terkini",tags:["lit","dig","pkn"],url:"https://journal.binus.ac.id/index.php/icj/article/view/12262",sinta:"SINTA 4"},
-{n:13,title:"Tantangan dan Peluang Pendidikan Kewarganegaraan di Era Digital",authors:"Arya, M. & Maulia, S.T.",journal:"Causa: Jurnal Hukum dan Kewarganegaraan",year:"2024",vol:"Vol.3 No.11",tags:["pkn","dig"],url:"https://ojsid.my.id/index.php/JKEPMAS/article/view/119",sinta:"Nasional"},
-{n:14,title:"Pendidikan Kewarganegaraan di Era Digital: Membentuk Pemikiran Kritis, Literasi Digital, dan Partisipasi Aktif",authors:"Mistortoify, G. & Najicha, F.U.",journal:"ResearchGate / Jurnal Nasional",year:"2023",vol:"November 2023",tags:["pkn","lit","dig"],url:"https://www.researchgate.net/publication/376088756",sinta:"Nasional"},
-{n:15,title:"Implementasi Nilai-Nilai Bela Negara dalam Kehidupan Bermasyarakat",authors:"Tim Peneliti",journal:"Jurnal Kewarganegaraan",year:"2022",vol:"Vol.6 No.1",tags:["pkn","nas"],url:"https://journal.upy.ac.id/index.php/pkn/article/view/2674",sinta:"SINTA 5"},
-{n:16,title:"Integrasi Nasional sebagai Upaya Menghadapi Tantangan dalam Keberagaman",authors:"Putri et al.",journal:"Indigenous Knowledge",year:"2024",vol:"Vol.2",tags:["pkn","nas"],url:"https://jurnal.uns.ac.id/indigenous/article/view/81492",sinta:"SINTA 5"},
-{n:17,title:"Memperkuat Integrasi Nasional di Era Digital: Penguatan Resolusi Konflik",authors:"Hidayah, Y., Ulfah, N. & Trihastuti, M.",journal:"Anthropocene Journal",year:"2023",vol:"Vol.2 No.2",tags:["pkn","dig","nas"],url:"https://jurnal.uns.ac.id/indigenous/article/view/81492",sinta:"Nasional"},
-{n:18,title:"Penguatan Literasi Digital Melalui Mata Kuliah Pendidikan Pancasila untuk Mengantisipasi Hoax",authors:"Suryaningsih, A., Hidayah, Y. & Pratomo, W.",journal:"Jurnal Civics",year:"2024",vol:"Vol.21 No.1",tags:["lit","pkn"],url:"https://ojs.udb.ac.id/HUBISINTEK/article/view/5867",sinta:"SINTA 2"},
-{n:19,title:"Literasi Digital sebagai Penguatan Kompetensi Kewarganegaraan di Era Post-Truth",authors:"Rahmawati, Y., Supriatna, N. & Winataputra, U.S.",journal:"Jurnal Civics",year:"2022",vol:"Vol.19 No.1",tags:["lit","pkn"],url:"https://ejournal.unesa.ac.id/index.php/jurnal-pendidikan-kewarganegaraa/article/view/74965",sinta:"SINTA 2"},
-{n:20,title:"Identitas Nasional sebagai Karakter Bangsa Indonesia dalam Bermedia Sosial",authors:"Tim Peneliti UIN Malang",journal:"Maliki Interdisciplinary Journal",year:"2023",vol:"Vol.2",tags:["nas","dig"],url:"https://urj.uin-malang.ac.id/index.php/mij/article/download/17075/4664/",sinta:"Nasional"},
-{n:21,title:"Implikasi Kemajuan Teknologi terhadap Jiwa Nasionalisme dan Semangat Cinta Tanah Air Mahasiswa",authors:"Adelia et al.",journal:"Jurnal Pendidikan Sosial dan Humaniora",year:"2024",vol:"Vol.3 No.2",tags:["nas","dig"],url:"https://publisherqu.com/index.php/pediaqu/article/view/951",sinta:"Nasional"},
-{n:22,title:"Pentingnya Integrasi Nasional di Tingkat Perguruan Tinggi",authors:"Tim Peneliti",journal:"Jurnal Ilmiah Widya Pustaka Pendidikan",year:"2024",vol:"Vol.12 No.2",tags:["pkn","nas"],url:"https://jiwpp.unram.ac.id/index.php/widya/article/view/155",sinta:"Nasional"},
-{n:23,title:"Mewujudkan Sikap Bela Negara pada Generasi Muda dengan Menghindari 4 Dosa Pendidikan",authors:"Tim Peneliti",journal:"WISSEN: Jurnal Ilmu Sosial dan Humaniora",year:"2024",vol:"Terkini",tags:["nas","pkn"],url:"https://journal.appisi.or.id/index.php/wissen/article/view/202",sinta:"Nasional"},
-{n:24,title:"Urgensi Pancasila dalam Menanamkan Jiwa Nasionalisme pada Generasi Muda di Era Globalisasi",authors:"Ratri, E.P. & Najicha, F.U.",journal:"Jurnal Global Citizen",year:"2022",vol:"Vol.11 No.1",tags:["nas","pkn","wn"],url:"https://ejurnal.unisri.ac.id/index.php/glbctz/article/view/5755",sinta:"SINTA 4"},
-{n:25,title:"Pengembangan Wawasan Nusantara dan Implementasi Nilai Pancasila di Kalangan Gen Z",authors:"Tim Peneliti UIN Malang",journal:"Maliki Interdisciplinary Journal",year:"2025",vol:"Vol.3 No.6",tags:["wn","nas","pkn"],url:"https://urj.uin-malang.ac.id/index.php/mij/article/download/17249/4901/",sinta:"Nasional"}
-];
+const journals = [];
+window.__journals = journals;
+window.__journals.push(
+{n:1,title:"Jurnal Moralita : Jurnal Pendidikan Pancasila dan Kewarganegaraan",authors:"Universitas Simalungun",vol:"Akreditasi: 2021 - 2026",url:"https://jurnal.usi.ac.id/index.php/moralita",pdf:"https://download1588.mediafire.com/gyrf58b8p4mg1k1T1dPQbN6CjzRZ7lpltU03oNlOmmw2cg6kiMAFZne4t8YV6dQ4hdyEhXAa3FLnReu0pk-V_9HRAQhYW89vVtiH8v8y6mNZ7zP6M2dl_zYS_NJUPut2QGU9XvrZz-u9zmZJ1luqJA8VO3w4MDcaGi4zyS45D6ncuA/27y0u9ws9ogakhm/01_Jurnal+Pendidikan+Pancasila+dan+Kewarganegaraan.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/16801"},
+{n:2,title:"Kajian Moral dan Kewarganegaraan",authors:"Universitas Negeri Surabaya",vol:"Akreditasi: 2021 - 2026",url:"https://ejournal.unesa.ac.id/index.php/jurnal-pendidikan-kewarganegaraa",pdf:"https://download1339.mediafire.com/n9qnp6mmyhwgm4aGIfIE4C1z7fq0a5s7PrafA7NNJFRSeVrrCGbRLn0vTVoI8SIZYB5ktQp8oTnciR4YjQlDLFeiMm007_MTkmHz0gVb_d-0NlXMDJ2PYghBT-MbuEf-C8D1L88uJOnI_z_NQIwZ59RPa34iMOb9VE6WMypP8-fUDg/gifwp1zgxaihh6x/02_Kajian+Moral+dan+Kewarganegaraan.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/12605"},
+{n:3,title:"JIMP: Jurnal Ilmiah Manajemen Pancasila",authors:"Universitas Pancasila",vol:"Akreditasi: 2022 - 2027",url:"https://journal.univpancasila.ac.id/index.php/jimp/",pdf:"https://download1085.mediafire.com/9zegtkrxofxgctND5BJdOtwLL2o959poFsOZ9wt2SNhDwTp5O1CJQaJb8hi_1gx9YWQX5mc6eau_CBKhaWUDnPGVCPFc87PTl-w4xEXKZYhQoD6IEb9-jbllm0kK555prAQEP5dDg9br0jztCU9YUdzuOsfiuh1F8EALla2gQFuAXw/h4bmgib7yocv9a8/03_JIMP+Jurnal+Ilmiah+Manajemen+Pancasila.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/12996"},
+{n:4,title:"Pancasila And Civics Education Journal",authors:"Universitas Muhammadiyah Sumatera Utara",vol:"Akreditasi: 2022 - 2027",url:"https://jurnal.umsu.ac.id/index.php/jpce/index",pdf:"https://download1327.mediafire.com/adv5s317q8zg0i3qM8QgiP2Z8TnnlxQ1_s3u_pGWU2xavnm4OJeY7L52IjFhK9xtqFmR-UA1u0zdCJFZZ4BaCMYzEacuQSg99mrP7cqKegQH12Ht1pTFhJP3Y-ankqgeS2uWwa_RuBGWwNSD_gCloywRzCeDgYHnm3MrOQWWVtxXzA/lklqeudz6p6gn8k/04_Pancasila+And+Civics+Education+Journal.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/17222"},
+{n:5,title:"IJOCE: Indonesia Journal of Civic Education",authors:"Institut Penelitian Matematika, Komputer, Keperawatan, Pendidikan dan Ekonomi",vol:"Akreditasi: 2020 - 2024",url:"https://journal.ipm2kpe.or.id/index.php/IJOCE",pdf:"https://download1338.mediafire.com/rxbehal5oemgi9k1C3bvcCHrWwyPw_-3I_XN0Mwc419LOmIAWqnWp5TYhf9HXHnRRlOnl7buJ-IDU7ehs3Qm19V67U8xmeG3RmU6E7Uyt8XdnFfV6xZ9rCJUaik6GEM2hk-g3Uo22f4mDdBDYjV9imHO4kIoVbYaOPYlG7OlxPu6QA/g5x4cym7zuhaj4z/05_IJOCE_+Indonesia+Journal+of+Civic+Education.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/11431"},
+{n:6,title:"Jurnal Ilmiah Mimbar Demokrasi",authors:"Universitas Negeri Jakarta",vol:"Akreditasi: 2018 - 2027",url:"http://journal.unj.ac.id/unj/index.php/jmb/index",pdf:"https://download1348.mediafire.com/3whfxd454ixgKuEcoWGRsgyibdstA3zva4-XYRHkTI7sen-ocYMggxrC4c5nHrXGnj3SLikco1fCndChjDyU3Oj544i0LLm4dlm8OnH0Onfl4KfEhVle9_f8cq4LmCCWleUc2i720TV1EYG6RSeTAvQg27tY5cYJjCwRUFkVOYOlOA/umpz0y4uuvww03p/06_Jurnal+Ilmiah+Mimbar+Demokrasi.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/5825"},
+{n:7,title:"Demokrasi: Jurnal Ilmu Pemerintahan",authors:"Universitas Muhammadiyah Lampung",vol:"Akreditasi: 2022 - 2026",url:"http://journal.uml.ac.id/DMKR",pdf:"https://download1979.mediafire.com/psj9qmycqh9gCZA5Wq7C0-2r9xZZJFr69dt2kBZGZx1DrqMW0Tysax0vSQZ7aM9b7a8xQJvYSMrWu8ORuf5trbErurUL2TMDgtwY1dfnSF1AsQXVV9A2gMu-gHBcTApEPnwQdpiYAz-VwUY1zwpgkpC11l06jQO5wU9OooOMMcAEUg/22ggwutei252ypl/07_Demokrasi_+Jurnal+Ilmu+Pemerintahan.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/13032"},
+{n:8,title:"Jurnal Serunai Pancasila dan Kewarganegaraan",authors:"STKIP Budidaya Binjai",vol:"Akreditasi: 2020 - 2025",url:"https://ejournal.stkipbudidaya.ac.id/index.php/jc",pdf:"https://download947.mediafire.com/0qhgfsypk1ugRN6yerU4ykDmyCKVmXpV5EKtheWNCaaH5hc3vfoUE0HMeZ-EW4_A0QzLObQnRGpDzJs9nVm3_MLGfpbP_gPaGZ7gtiYMqp33Atv30CXLPouhaq3u-6OFo4nugvT9QroQ0pxql-IqVG3UOHXFufY9TSYMvw28dFtwEQ/lcdb70a13vz0z0e/08_Jurnal+Serunai+Pancasila+dan+Kewarganegaraan.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/15081"},
+{n:9,title:"Jurnal Global Citizen : Jurnal Ilmiah Kajian Pendidikan Kewarganegaraan",authors:"Universitas Slamet Riyadi",vol:"Akreditasi: 2019 - 2025",url:"https://ejurnal.unisri.ac.id/index.php/glbctz",pdf:"https://download1072.mediafire.com/u3fxe7fwopig0MkwZ0Z5mizrAfX7w6qG94x3CG2elt_6I_CHGPY0m5RVrwHDduQqrmj0FIJFMNWn6-QBvM0P4PNH3CoSqo2IefiaVKit0bk9bv8ACeYLlSZ7tDIDtMKJZacQyPmnE4sPdLExq9ZZt6DuyHbNL6Y9MGVrhD6jaw8Ulw/g3mx93c951v9v78/09_Jurnal+Ilmiah+Kajian+Pendidikan+Kewarganegaraan.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/6620"},
+{n:10,title:"Brahmana : Jurnal Penerapan Kecerdasan Buatan",authors:"Sekolah Tinggi Ilmu Komputer Tunas Bangsa",vol:"Akreditasi: 2020 - 2025",url:"https://tunasbangsa.ac.id/pkm/index.php/brahmana",pdf:"https://download1336.mediafire.com/h8kixnhluumgDING2R_tSVcs8mada6t397vA49uggfmBEEj6gH2x6-gKxoQy6EJ-TXHRCMWevkhRVd7HuXLJXerDcLAcoKbeX19IfCLgv7nKZisgRnpmL7phIj_OH93fe_fag1Zls3umMvmYrKC8CxjyEB2na0pHHEea7ceTGJUd7g/cg6huoij5o74q3b/10_Brahmana+_+Jurnal+Penerapan+Kecerdasan+Buatan.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/9245"},
+{n:11,title:"Jurnal Desentralisasi dan Kebijakan Publik (JDKP)",authors:"Universitas Serang Raya",vol:"Akreditasi: 2020 - 2025",url:"https://e-jurnal.lppmunsera.org/index.php/JDKP",pdf:"https://download940.mediafire.com/axn7er02ivbgpCwgZBEpWCxgPtrVTBY5grQMNjSxkCwFa2YUNNnKtAEGJCdJpqQZMu5jULTSCP7lBWAnydncFSKA2AekUkAh4xWmEpXcGIuBnw5onj9sDo_GI9LqH85icWbUHcHqiSm9EMrJZ0l-Yn2TDXwY1ApZyrUyFoDOAWc0UQ/n80tep2iroamggn/11_Jurnal+Desentralisasi+dan+Kebijakan+Publik+%28JDKP%29.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/9464"},
+{n:12,title:"PKn Progresif : Jurnal Pemikiran dan Penelitian Kewarganegaraan",authors:"Universitas Sebelas Maret",vol:"Akreditasi: 2023 - 2027",url:"https://jurnal.uns.ac.id/pknprogresif",pdf:"https://download1587.mediafire.com/rod7zssjg28gyHyId_JDBahuSwuxcVcLmMF2ew6xcEV20zcedL50wSa7yI_UBbqW0agO88d3O84Xg5Fn-xl7TP1Fn7pwZX-t7uOZpSeaDWJbN1YQSk4h3Nc9sCj8q41lWhKrHZSj7bVZD5FASDskOSaPYmFv55ePeDUokQAuKm0-BA/01hayskrxrjez8w/12_PKn+Progresif+_+Jurnal+Pemikiran+dan+Penelitian+Kewarganegaraan.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/17089"},
+{n:13,title:"CIVICS: Jurnal Pendidikan Pancasila dan Kewarganegaraan",authors:"Universitas Buana Perjuangan Karawang",vol:"Akreditasi: 2019 - 2023",url:"http://journal.ubpkarawang.ac.id/index.php/CIVICS",pdf:"https://download1350.mediafire.com/rkanphhj1icgHUumT0APxdCBEJC_GXO4PzgDK0zHk5yEHnXWvx7mayYGoKkLom7crImmY-1sxw3V6CqpPg9iXQE8qIZk17vUNqsgfqyt98M-6Jt5PM26eibQBa53ioIQfHkdhOWztcSw-WXWipFYj-EcUy5AhZUWfPcIyTZtNYeFHw/tysefzptwapvei0/13_CIVICS_+Jurnal+Pendidikan+Pancasila+dan+Kewarganegaraan.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/8246"},
+{n:14,title:"Journal Civics and Social Studies",authors:"Institut Pendidikan Indonesia",vol:"Akreditasi: 2018 - 2026",url:"https://journal.institutpendidikan.ac.id/index.php/journalcss",pdf:"https://download851.mediafire.com/girar7yixqcglD9Wtmv32rioevrbHuSimNP1rqXSCvrcXEIVh1y-gDiLJB0slsQt8j-HQju3JGkZKhj-NzVPVeLzHyOzpSy7PfZNkss1sbw6lN9nq_PRwSyAqh75KUq6yCsFiC3GapUg2HvsZps1DyTaR1_NmlcWNPPSdyECTzvVpQ/vsn0llgtk4m0pmo/14_Journal+Civics+and+Social+Studies.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/6471"},
+{n:15,title:"Academy of Social Science and Global Citizenship Journal",authors:"Universitas Cokroaminoto Yogyakarta",vol:"Akreditasi: 2021 - 2026",url:"https://jurnal.ucy.ac.id/index.php/AoSSaGCJ",pdf:"https://download1593.mediafire.com/jf0z174gweygojpLir-RiNftJgVrkByn4p7JxPOo2QQWnUfVj66f80Fb0uB5AEnCg_mDTgQ5NFVVjPWc0jTn-_s5fTn7v4TlWEG1xrIkYIMZHyrP6cIrrW9sWhCeyeht1hOdQqgdejFQVUWdchZqcobOCQ72-GvJsuHS9O_b-xP3XA/fmpjf74jgr2t3l7/15_Academy+of+Social+Science+and+Global+Citizenship+Journal.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/13141"},
+{n:16,title:"Jurnal Citizenship",authors:"Universitas Ahmad Dahlan",vol:"Akreditasi: 2020 - 2029",url:"http://journal1.uad.ac.id/index.php/Citizenship/index",pdf:"https://download1507.mediafire.com/lywxqc8tqq0g6gnYTxLW-5BLLlL80SXbM_P7VO_V18v3XsnxjUfznu6fohh_GI3uCh50LOLFl0I-J4pPUxkQW9IbUzjbckhQFTcf7EhcsimRXdcYdVk6nPs8lOWw-lv6Uv0_fEUOiRU-QYv1jP6Yp8QvLiSSc9713vDaEPK5mJa31g/y1pqqvrw2i50sqb/16_Jurnal+Citizenship.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/9460"},
+{n:17,title:"Jurnal Citizenship Virtues",authors:"STKIP Kusumanegara",vol:"Akreditasi: 2021 - 2026",url:"https://jurnal.stkipkusumanegara.ac.id/index.php/citizenshipvirtues",pdf:"https://download938.mediafire.com/rk52h2ynk5ygpGBaetYhTQRPvCi2kaIQ03p4cBVoq7D5xrE3UvqJi3DQuD5T1jtGhrizbakqiO-fJ7YXwwrPCqNqW8lzpeqUoIa5VS9moQxLolNLBB6oZU4C4WRiD3wIwwz9HqXO3hqZW0euLtG_bruWJ7KuajnMRUQtdI6bZ74lsA/scgrp7npn8gfzlx/17_Jurnal+Citizenship+Virtues.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/12028"},
+{n:18,title:"JCES (Journal of Character Education Society)",authors:"Universitas Muhammadiyah Mataram",vol:"Akreditasi: 2024 - 2029",url:"http://journal.ummat.ac.id/index.php/JCES",pdf:"https://download1347.mediafire.com/qqgy3axw4opg5zvlKCMeuAGued7HQ3F-VcZCwZm_L8yUynHWDljgCC98n03jd6Ly06oiQCYD8VjiZBd1NH-eQfqb9ofWw-lYMW3eb4fufJbfdBndi3tq1qilkMmaFvwdwIg54PiToK45HvsJCWSRV8VDyWHMtnIYIJSWkVxRjisUGQ/s1pozd0iydr35tk/18_JCES+%28Journal+of+Character+Education+Society%29.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/6379"},
+{n:19,title:"Jurnal Pancasila dan Kewarganegaraan (JUPANK)",authors:"Universitas Muhammadiyah Bengkulu",vol:"Akreditasi: 2022 - 2026",url:"https://jurnal.umb.ac.id/index.php/jupank/index",pdf:"https://download1583.mediafire.com/r76rnvlt9g6ghWKmnTyXF3EjdiN18vulVNd1w-31_eSo85MvvRuT2zk0YAxmoOE_i0QpvrAdHXfpap6y2FRsVRbUYKAuQz-uetVaLXf90tSymAyikQlPkGDZlAnssAmkT2PGGOQR_PEqGeOMQUaknalkQfxQFkT-lT3mO2paUvR4xA/u8dohg5bgxpy38z/19_Jurnal+Pancasila+dan+Kewarganegaraan+%28JUPANK%29.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/13762"},
+{n:20,title:"Journal of Instructional Technology",authors:"Universitas Lambung Mangkurat",vol:"Akreditasi: 2023 - 2026",url:"https://ppjp.ulm.ac.id/journals/index.php/j-instech",pdf:"https://download942.mediafire.com/lti2d1s1u3pgdiz0SQD57N-tB74u1ZwJGcpcRV4y4jag-BLacXUIrTcSMtuR0bAqI44p4JPJ9rAq8ayh6IFcP0xd7pGn6cM54gZAlv-xam1tgYsmGSuaPSIAEcevkrk-CbL_-jo6qD23H5rl8SX4AWAS_nwV5UgNAOxQ8hO5VbkyoQ/06mimh3ic9yde0d/20_J-INSTECH+Journal+of+Instructional+Technology.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/13957"},
+{n:21,title:"Journal of Innovation in Teaching and Instructional Media",authors:"Yayasan Sembilan Pemuda Indonesia",vol:"Akreditasi: 2022 - 2026",url:"https://ejournal.sembilanpemuda.id/index.php/jitim",pdf:"https://download1648.mediafire.com/29grxvg5y1agOIPxvG_jE9v_0zXGqOowWOkn3PvetZ8VDRYm2zn0GZnBGZGlmpP2IQQb68y_fRFSNp7KwuhyQLA299kn8VUUGpdDSLfK1as4GSRnicuE-vQK4Rpi4pj8YQZ4LzmApuabeKqFvdN8KH256TuyPHiCybgWn3aj8tqRKw/ie4r5ee3dburt1n/21_Journal+of+Innovation+in+Teaching+and+Instructional+Media.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/14689"},
+{n:22,title:"Madani Jurnal Politik dan Sosial Kemasyarakatan",authors:"Universitas Islam Darul Ulum",vol:"Akreditasi: 2020 - 2025",url:"https://ejournal.unisda.ac.id/index.php/madani",pdf:"https://download1472.mediafire.com/aohnxrijuzggO47k2_VFV-TY-344kSV9qB18w_ZUxDLXoqBAdytZh43w0DfmJu3vEBoQK7JNJCZacgm3PVTQPvVnG0ZnGs84xgUzRQ3Pp2FtUOp5SRS0WXTOGgJYX8SmSz8PzAoKuaMwDbOH7c4GCDdqf800yOVPcjoKhrYzGHd9Pw/4etgodzrlx7dwit/22_Madani+Jurnal+Politik+dan+Sosial+Kemasyarakatan.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/8573"},
+{n:23,title:"Jurnal Penelitian dan Pendidikan IPS",authors:"Direktorat Pascasarjana Universitas PGRI Kanjuruhan Malang",vol:"Akreditasi: 2023 - 2028",url:"http://ejournal.unikama.ac.id/index.php/JPPI",pdf:"https://download1335.mediafire.com/ou3vmbzlx02gCM_2_AgO_02CihvS39b4tVr-cLhQd24di9yGufmlRIjebAGYXwrGfNY-pkZpnDDLVfOTOqTmAtIeXmGHWZqv3kbQTdL95-QvaCLWZ0WaoQxdnu_RfNSjKcbtOYBAW6lojteA9RNZc6STmh8YfSNnhhik8MjB-MxpNw/paj83h2kf7e7a5b/23_Jurnal+Penelitian+dan+Pendidikan+IPS.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/7582"},
+{n:24,title:"Jurnal Ilmiah Edukatif",authors:"Fakultas Tarbiyah IAI Sultan Muhammad Syafiuddin Sambas",vol:"Akreditasi: 2021 - 2025",url:"http://journal.iaisambas.ac.id/index.php/edukatif",pdf:"https://download844.mediafire.com/wam6nf91u18gnVS9mc9wq5i8t0nUTX5n3JTTBN4LqPPlDRcg4YCAxE3K1P2WvXR-gZ7FSvq9M-ldGDzvtglmkw_yeD7KRyJcAWKeJ1_BC0c_GGR9Z69SVNv0zSdHE1Q1YgmO_R-HyZ7ESdubVDreLFhgZfnH2SKRcdwnjEw3k6sFZA/apo06yrk6y2lhzw/24_JURNAL+ILMIAH+EDUKATIF.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/11123"},
+{n:25,title:"Istifkar: Media Transformasi Pendidikan",authors:"Sekolah Tinggi Islam Kendal",vol:"Akreditasi: 2022 - 2027",url:"https://jurnal.stikkendal.ac.id/index.php/istifkar",pdf:"https://download1649.mediafire.com/m7tb6uifvpigwpzYoeIr1EJfu81kj04498lciZ3HkPReaCvyB0-hnR3I2vwBK-Sd_gJs-11-vGGB97hSnYvCub_42HPu8AjViAMfkZcaxg4YlMYFs12nxsryLBVg36a-5J_EomDO_uv51OeWw16relHxej9LnJJZvpExLaLUjqCDbQ/fwu8xyih2p14jzw/25_Istifkar_+Media+Transformasi+Pendidikan.pdf",sinta_url:"https://sinta.kemdiktisaintek.go.id/journals/profile/14198"}
+);
+</script>
+<script>
+(function(){
+  const journals = window.__journals;
+  const grid = document.getElementById('grid');
+  const empty = document.getElementById('empty');
+  const stats = document.getElementById('stats');
+  const searchInput = document.getElementById('searchInput');
+  const filterBar = document.getElementById('filterBar');
+  const themeBtn = document.getElementById('themeBtn');
 
-const tagMap={wn:"Wawasan Nusantara",dig:"Media Digital",pkn:"PKn & Kebangsaan",nas:"Nasionalisme",lit:"Literasi Digital"};
-let activeTag='all';
-let searchQuery='';
+  const tagLabels = {wn:"Wawasan Nusantara",dig:"Digital Nationalism",ai:"AI & Algorithm",genz:"Generasi Z",nas:"Nasionalisme",lit:"Literasi Digital",pkn:"PKn"};
+  const sintaClass = s => {
+    const m = String(s).toLowerCase();
+    if(m.startsWith("s")) return "sinta " + m;
+    return "sinta";
+  };
 
-function renderStats(){
-  document.getElementById('stat-wn').textContent=journals.filter(j=>j.tags.includes('wn')).length;
-  document.getElementById('stat-dig').textContent=journals.filter(j=>j.tags.includes('dig')).length;
-  document.getElementById('stat-pkn').textContent=journals.filter(j=>j.tags.includes('pkn')).length;
-}
+  let activeTag = "all";
+  let activeSinta = "all";
+  let query = "";
 
-function render(){
-  let list=journals;
-  if(activeTag!=='all') list=list.filter(j=>j.tags.includes(activeTag));
-  if(searchQuery){
-    const q=searchQuery.toLowerCase();
-    list=list.filter(j=>
-      j.title.toLowerCase().includes(q)||
-      j.authors.toLowerCase().includes(q)||
-      j.journal.toLowerCase().includes(q)
-    );
+  function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);}
+  function googleSearch(j){return "https://www.google.com/search?q="+encodeURIComponent(j.title+' '+j.journal+' filetype:pdf');}
+  function sintaSearch(j){return "https://sinta.kemdikbud.go.id/journals?q="+encodeURIComponent(j.journal)+"&search=1";}
+
+  function cardHtml(j){
+    const openLink = j.url;
+    const pdfLink = j.pdf;
+    const sintaLink = j.sinta_url;
+    return `<article class="card">
+      <div class="card-top"><div class="num">${j.n}</div><div class="title">${escapeHtml(j.title)}</div></div>
+      <div class="meta">${escapeHtml(j.authors)}</div>
+      <div class="actions">
+        <a href="${openLink}" target="_blank" rel="noopener" class="btn primary" title="Buka halaman jurnal di OJS"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Buka Jurnal</a>
+        <a href="${pdfLink}" target="_blank" rel="noopener" class="btn dl" title="Download PDF jurnal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download PDF</a>
+      </div>
+      <div class="actions" style="justify-content:center;margin-top:8px">
+        <a href="${sintaLink}" target="_blank" rel="noopener" class="btn sinta-btn" title="Cek jurnal di SINTA Kemdikbud"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Buka SINTA</a>
+      </div>
+    </article>`;
   }
-  const g=document.getElementById('grid');
-  document.getElementById('result-count').textContent='Menampilkan '+list.length+' jurnal';
-  if(list.length===0){
-    g.innerHTML='<div class="empty" style="grid-column:1/-1"><div class="empty-icon">🔍</div><div>Tidak ada jurnal yang cocok dengan pencarian Anda.</div></div>';
-    return;
-  }
-  g.innerHTML=list.map(j=>{
-    const tagHtml=j.tags.map(t=>'<span class="tag tag-'+t+'">'+tagMap[t]+'</span>').join('');
-    return '<div class="card"><div class="card-top"><span class="num">'+j.n+'</span><span class="title">'+j.title+'</span></div>'+
-      '<div class="meta">👤 '+j.authors+'<br>📖 '+j.journal+'<br>📅 '+j.year+' &middot; '+j.vol+'</div>'+
-      '<div class="tags">'+tagHtml+'</div>'+
-      '<div class="link-row"><a href="'+j.url+'" target="_blank" class="link-btn">🔗 Buka Jurnal</a><span class="sinta">'+j.sinta+'</span></div></div>';
-  }).join('');
-}
 
-document.querySelectorAll('.filter-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    activeTag=btn.dataset.tag;
+  function render(){
+    const q = query.trim().toLowerCase();
+    const filtered = journals.filter(j=>{
+      const text = (j.title+" "+j.authors).toLowerCase();
+      return !q || text.includes(q);
+    });
+    grid.innerHTML = filtered.map(cardHtml).join("");
+    empty.classList.toggle("hidden", filtered.length>0);
+    stats.textContent = `Menampilkan ${filtered.length} dari ${journals.length} jurnal`;
+  }
+
+  filterBar.addEventListener("click",e=>{
+    const b = e.target.closest(".fbtn"); if(!b) return;
+    filterBar.querySelectorAll(".fbtn").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+    activeTag = b.dataset.tag;
     render();
   });
-});
 
-document.getElementById('search').addEventListener('input',e=>{
-  searchQuery=e.target.value;
-  render();
-});
+  let t; searchInput.addEventListener("input",e=>{clearTimeout(t);t=setTimeout(()=>{query=e.target.value;render();},120);});
 
-function toggleTheme(){
-  const html=document.documentElement;
-  const cur=html.getAttribute('data-theme');
-  const next=cur==='dark'?'light':'dark';
-  html.setAttribute('data-theme',next);
-  document.querySelector('.theme-toggle').textContent=next==='dark'?'☀️':'🌙';
-  try{localStorage.setItem('theme',next)}catch(e){}
-}
+  // theme
+  const saved = localStorage.getItem("theme");
+  if(saved==="light") document.documentElement.setAttribute("data-theme","light");
+  themeBtn.addEventListener("click",()=>{
+    const cur = document.documentElement.getAttribute("data-theme");
+    if(cur==="light"){document.documentElement.removeAttribute("data-theme");localStorage.setItem("theme","dark");}
+    else{document.documentElement.setAttribute("data-theme","light");localStorage.setItem("theme","light");}
+  });
 
-(function init(){
-  try{
-    const saved=localStorage.getItem('theme');
-    if(saved){
-      document.documentElement.setAttribute('data-theme',saved);
-      document.querySelector('.theme-toggle').textContent=saved==='dark'?'☀️':'🌙';
-    }
-  }catch(e){}
-  renderStats();
   render();
 })();
 </script>
+</div>
 </body>
 </html>
